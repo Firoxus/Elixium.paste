@@ -6127,7 +6127,7 @@ function Neverlose_Main:Window(config)
         })
 
         Neverlose_Main:Notify({
-            Title = "Welcome, ".. game.Players.LocalPlayer.Name,
+            Title = "Welcome to Elixium.",
             Text = "Menu Key | J",
             Time = 2
         })
