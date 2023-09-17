@@ -4,7 +4,7 @@ end
 
 local Neverlose_Main = {
     Settings = {
-        CloseBind = "RightShift",
+        CloseBind = "J",
     },
     Flags = {},
     SettingsFlags = {},
@@ -6121,14 +6121,14 @@ function Neverlose_Main:Window(config)
             MainFrame.Visible = t
         end, {
             {
-                key = Enum.KeyCode.RightShift,
+                key = Enum.KeyCode.J,
                 Toggled = true
             }
         })
 
         Neverlose_Main:Notify({
             Title = "Welcome, ".. game.Players.LocalPlayer.Name,
-            Text = "Menu Key | RightShift",
+            Text = "Menu Key | J",
             Time = 2
         })
     end)
