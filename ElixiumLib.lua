@@ -1313,14 +1313,6 @@ function Neverlose_Main:Window(config)
         return string.gsub(keyText, "Enum.KeyCode.", "")
     end
 
-    spawn(function()
-    Neverlose_Main:Notify({
-        Title = "Welcome",
-        Text = "Welcome | ".. game.Players.LocalPlayer.Name,
-        Time = 2
-    })
-    end)
-
 
     
 
