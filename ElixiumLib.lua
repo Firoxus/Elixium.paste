@@ -6129,14 +6129,14 @@ function Neverlose_Main:Window(config)
             MainFrame.Visible = t
         end, {
             {
-                key = Enum.KeyCode.LeftControl,
+                key = Enum.KeyCode.RightShift,
                 Toggled = true
             }
         })
 
         Neverlose_Main:Notify({
-            Title = "Welcome",
-            Text = "Menu Key | LeftControl",
+            Title = "Welcome, ".. game.Players.LocalPlayer.Name,
+            Text = "Menu Key | RightShift",
             Time = 2
         })
     end)
