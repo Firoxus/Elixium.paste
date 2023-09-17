@@ -512,7 +512,7 @@ function Neverlose_Main:Window(config)
         while wait() do
             if RememberKey == false and HasBeenToggled == false then
                 pcall(function()
-                    EditSettingsCFG("KeyNeverlose", "Key Holder", "")
+                    EditSettingsCFG("ElixiumKey", "Key Holder", "")
                 end)
             end
         end
@@ -596,7 +596,7 @@ function Neverlose_Main:Window(config)
     LoadButton.TextStrokeColor3 = Color3.fromRGB(27, 141, 240)
     LoadButton.TextStrokeTransparency = 1
 
-    LoadSettingsCFG("KeyNeverlose")
+    LoadSettingsCFG("ElixiumKey")
 
     LoadButton.MouseButton1Click:Connect(function()
         
@@ -614,7 +614,7 @@ function Neverlose_Main:Window(config)
             ):Play()
         end
         if table.find(KeyAccess, KeyHolderText) then
-            SaveSettingsCFG("KeyNeverlose")
+            SaveSettingsCFG("ElixiumKey")
             KeyHolder:NonVisible(false)
             TweenService:Create(
                 LoadButton,
