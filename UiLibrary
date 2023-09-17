@@ -372,7 +372,7 @@ function Neverlose_Main:Window(config)
     KeyTitle.Position = UDim2.new(0.310476154, 0, 0.000740175194, 0)
     KeyTitle.Size = UDim2.new(0, 248, 0, 67)
     KeyTitle.Font = Enum.Font.FredokaOne
-    KeyTitle.Text = "KEY SYSTEM"
+    KeyTitle.Text = "Elixium"
     KeyTitle.TextColor3 = Color3.fromRGB(239, 248, 246)
     KeyTitle.TextSize = 45.000
     KeyTitle.TextStrokeColor3 = Color3.fromRGB(27, 141, 240)
