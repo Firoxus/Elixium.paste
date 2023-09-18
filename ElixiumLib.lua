@@ -6064,7 +6064,7 @@ function Neverlose_Main:Window(config)
     end -- TabsSec end
     spawn(function()
         task.wait(.2)
-        getgenv().LuaSection = TabsSec:TSection("Lua")
+        getgenv().LuaSection = TabsSec:TSection("Configurations")
         local Configs = LuaSection:Tab("Configs")
         local Sec1 = Configs:Section("Load Config")
         local Sec2 = Configs:Section("Create Config")
@@ -6126,12 +6126,6 @@ function Neverlose_Main:Window(config)
             }
         })
 
-        Neverlose_Main:Notify({
-            Title = "Welcome to Elixium.",
-            Text = "Menu Key | J",
-            Time = 2
-        })
-    end)
     spawn(function()
         while task.wait() do
             pcall(function()
