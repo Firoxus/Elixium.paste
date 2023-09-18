@@ -11,16 +11,7 @@ getgenv().ThirdPerson = nil
 getgenv().TeamCheck = nil
 getgenv().Enabled = nil
 
-local NotifyLibrary =
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
-local Notify = NotifyLibrary.Notify
-Notify(
-    {
-        Title = "Tenaki Smooth Lock",
-        Description = "Bruh Tf is this Obfuscator Shitty Asf Cracked By Paws#2140",
-        Duration = 3
-    }
-)
+
 if getgenv().Enabled == true then
     getgenv().Keybind = getgenv().Keybind
 else
