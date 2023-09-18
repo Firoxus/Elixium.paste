@@ -1664,7 +1664,7 @@ function Neverlose_Main:Window(config)
     LuaButton.Position = UDim2.new(0.0837988853, 0, 0.723393798, 0)
     LuaButton.Size = UDim2.new(0, 124, 0, 38)
     LuaButton.Font = Enum.Font.GothamBold
-    LuaButton.Text = "Lua"
+    LuaButton.Text = "Config System"
     LuaButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     LuaButton.TextSize = 17.000
     LuaButton.TextXAlignment = Enum.TextXAlignment.Left
