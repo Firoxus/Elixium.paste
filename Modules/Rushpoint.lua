@@ -1,7 +1,7 @@
 getgenv().SilentAimSettingss = {
-   ['FOV'] = nil;
-   ['BodyPart'] = nil;
-   ['FOVCircle'] = nil;
+   ['FOV'] = 0;
+   ['BodyPart'] = 'Head';
+   ['FOVCircle'] = false;
 };
 
 local Settings = getgenv().Settings;
