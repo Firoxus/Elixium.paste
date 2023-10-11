@@ -45,16 +45,16 @@ local function GetNearest()
            if (Value ~= Player) and (Value.SelectedTeam.Value ~= Player.SelectedTeam.Value) then
            if (not Characters[Value]) then continue end;
            local Char = Characters[Value];
-           if (not Char:FindFirstChild(Settings.BodyPart)) then continue end;
+           if (not Char:FindFirstChild(SilentAimSettingss.BodyPart)) then continue end;
 
            Distance = (Char.HumanoidRootPart.CFrame.p - Camera.CFrame.p).Magnitude;
            worldPoint = Char.Head.Position;
            vector, onScreen = Camera:WorldToScreenPoint(worldPoint);
            magnitude = (Vector2.new(Mouse.X, Mouse.Y) - Vector2.new(vector.X, vector.Y)).Magnitude;
    
-           if (magnitude > Settings['FOV']) then continue end;
+           if (magnitude > SilentAimSettingss['FOV']) then continue end;
 
-           table.insert(Targets, {Value, Distance, Char:FindFirstChild(Settings.BodyPart)});
+           table.insert(Targets, {Value, Distance, Char:FindFirstChild(SilentAimSettingss.BodyPart)});
        end;
    end;
 
@@ -103,7 +103,7 @@ Network.FireServer = function(...)
 end;
 
 RunService.Stepped:Connect(function()
-   Circle.Visible = Settings.FOVCircle;
-   Circle.Radius = Settings.FOV;
+   Circle.Visible = SilentAimSettingss.FOVCircle;
+   Circle.Radius = SilentAimSettingss.FOV;
    Circle.Position = WTS(Mouse.hit.p);
 end);
