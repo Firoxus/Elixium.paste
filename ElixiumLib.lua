@@ -1388,7 +1388,6 @@ function Neverlose_Main:Window(config)
     VersionText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
     VersionText.Size = UDim2.new(0, 35, 0, 18)
     VersionText.Font = Enum.Font.GothamBold
-    VersionText.Text = "Version: <font color='rgb(9, 174, 255)'>"..BuildInfo:VersionType().."</font>"
     VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
     VersionText.TextSize = 14.000
     VersionText.TextXAlignment = Enum.TextXAlignment.Left
