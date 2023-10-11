@@ -1388,6 +1388,7 @@ function Neverlose_Main:Window(config)
     VersionText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
     VersionText.Size = UDim2.new(0, 35, 0, 18)
     VersionText.Font = Enum.Font.GothamBold
+    VersionText.Text = "Version: 1"
     VersionText.TextColor3 = Color3.fromRGB(255, 255, 255)
     VersionText.TextSize = 14.000
     VersionText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1402,7 +1403,7 @@ function Neverlose_Main:Window(config)
     BuildDateText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
     BuildDateText.Size = UDim2.new(0, 35, 0, 18)
     BuildDateText.Font = Enum.Font.GothamBold
-    BuildDateText.Text = "Build date: <font color='rgb(9, 174, 255)'>"..BuildInfo:GetBuild().."</font>"
+    BuildDateText.Text = "Build date: 1.1.1.1"
     BuildDateText.TextColor3 = Color3.fromRGB(255, 255, 255)
     BuildDateText.TextSize = 14.000
     BuildDateText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1417,7 +1418,7 @@ function Neverlose_Main:Window(config)
     BuildTypeText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
     BuildTypeText.Size = UDim2.new(0, 35, 0, 18)
     BuildTypeText.Font = Enum.Font.GothamBold
-    BuildTypeText.Text = "Build type: <font color='rgb(9, 174, 255)'>"..BuildInfo:BuildType().."</font>"
+    BuildTypeText.Text = "Build type: Elixium"
     BuildTypeText.TextColor3 = Color3.fromRGB(255, 255, 255)
     BuildTypeText.TextSize = 14.000
     BuildTypeText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1432,7 +1433,7 @@ function Neverlose_Main:Window(config)
     RegisteredText.Position = UDim2.new(0.0666666701, 0, 0.12350598, 0)
     RegisteredText.Size = UDim2.new(0, 35, 0, 18)
     RegisteredText.Font = Enum.Font.GothamBold
-    RegisteredText.Text = "Registered to: <font color='rgb(9, 174, 255)'>"..Player.Name.."</font>"
+    RegisteredText.Text = "Registered to: Firox"
     RegisteredText.TextColor3 = Color3.fromRGB(255, 255, 255)
     RegisteredText.TextSize = 14.000
     RegisteredText.TextXAlignment = Enum.TextXAlignment.Left
@@ -1447,7 +1448,7 @@ function Neverlose_Main:Window(config)
     NewsText.Position = UDim2.new(0, 0, 0.649999976, 0)
     NewsText.Size = UDim2.new(0, 92, 0, 18)
     NewsText.Font = Enum.Font.GothamBold
-    NewsText.Text = "Latest News: <font color='rgb(9, 174, 255)'>"..BuildInfo:GetNews().."</font>"
+    NewsText.Text = "Latest News: Updated rushpoint"
     NewsText.TextColor3 = Color3.fromRGB(255, 255, 255)
     NewsText.TextSize = 14.000
     NewsText.TextXAlignment = Enum.TextXAlignment.Left
