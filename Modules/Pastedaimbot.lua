@@ -12,9 +12,9 @@ local VERSION = "v1.1.20"
 
 if not getgenv().AimbotSettings then
 	getgenv().AimbotSettings = {
-		TeamCheck = true, -- Press ] to toggle
-		VisibleCheck = true,
-		IgnoreTransparency = true, -- if enabled, visible check will automatically filter transparent objects
+		TeamCheck = false, -- Press ] to toggle
+		VisibleCheck = false,
+		IgnoreTransparency = false, -- if enabled, visible check will automatically filter transparent objects
 		IgnoredTransparency = 0.5, -- all parts with a transparency greater than this will be ignored (IgnoreTransparency has to be enabled)
 		RefreshRate = 10, -- how fast the aimbot updates (milliseconds)
 		Keybind = "MouseButton2",
@@ -22,10 +22,10 @@ if not getgenv().AimbotSettings then
 		MaximumDistance = 300, -- Set this to something lower if you dont wanna lock on some random person across the map
 		AlwaysActive = false,
 		Aimbot = {
-			Enabled = true,
+			Enabled = false,
 			TargetPart = "Head",
-			Use_mousemoverel = true,
-			Strength = 100, -- 1% - 200%
+			Use_mousemoverel = false,
+			Strength = 200, -- 1% - 200%
 			AimType = "Hold", -- "Hold" or "Toggle"
 			AimAtNearestPart = false
 		},
@@ -41,8 +41,8 @@ if not getgenv().AimbotSettings then
 			RequireMovement = true
 		},
 		FovCircle = {
-			Enabled = true,
-			Dynamic = true,
+			Enabled = false,
+			Dynamic = false,
 			Radius = 100,
 			Transparency = 1,
 			Color = Color3.fromRGB(255,255,255),
