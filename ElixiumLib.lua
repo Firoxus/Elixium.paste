@@ -1,5 +1,6 @@
 -- // CREDITS TO MANA64 FOR THIS UI LIB <3
 -- // UI LIB DISCORD SERVER: https://discord.gg/NZC6Ja4xqG
+local ConfigGameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 if game.CoreGui:FindFirstChild("Neverlose1") then
     game.CoreGui.Neverlose1:Destroy()
 end
@@ -2947,7 +2948,7 @@ function Neverlose_Main:Window(config)
         -- end
 
         function Neverlose_Main:LoadCfg(cfg)
-            local Encoded = readfile(Folder1 .. "/configs/" .. cfg .. ".txt")
+            local Encoded = readfile(Folder1 .. "/configs/" .. cfg .. " - " .. ConfigGameName .. ".txt")
 
             local JSONData = HttpService:JSONDecode(Encoded)
             
@@ -2970,7 +2971,7 @@ function Neverlose_Main:Window(config)
             
             local Encoded = HttpService:JSONEncode(content) -- Convert to JSON string
             
-            writefile(Folder1 .. "/configs/" .. cfg .. ".txt", Encoded)
+            writefile(Folder1 .. "/configs/" .. cfg .. " - " .. ConfigGameName .. ".txt", Encoded)
         end
         
         function Neverlose_Main:CreateCfg(cfg)
@@ -2981,7 +2982,7 @@ function Neverlose_Main:Window(config)
             
             local Encoded = HttpService:JSONEncode(content) -- Convert to JSON string
             
-            writefile(Folder1 .. "/configs/" .. cfg .. ".txt", Encoded)
+            writefile(Folder1 .. "/configs/" .. cfg .. " - " .. ConfigGameName .. ".txt", Encoded)
         end
         
         SaveCFGB.MouseButton1Click:Connect(function()
