@@ -1,10 +1,20 @@
+--[[
+v1.1.20 Changes
+- Fixed for Phantom Forces (kinda)
+  - Universal Aimbot will now prompt you that you need to put a bypass script in your autoexec folder.
+  - Bypass script made by Spoorloos
+
+UI Changes
+- No UI changes
+]]
+
 local VERSION = "v1.1.20"
 
 if not getgenv().AimbotSettings then
 	getgenv().AimbotSettings = {
-		TeamCheck = false, -- Press ] to toggle
-		VisibleCheck = false,
-		IgnoreTransparency = false, -- if enabled, visible check will automatically filter transparent objects
+		TeamCheck = true, -- Press ] to toggle
+		VisibleCheck = true,
+		IgnoreTransparency = true, -- if enabled, visible check will automatically filter transparent objects
 		IgnoredTransparency = 0.5, -- all parts with a transparency greater than this will be ignored (IgnoreTransparency has to be enabled)
 		RefreshRate = 10, -- how fast the aimbot updates (milliseconds)
 		Keybind = "MouseButton2",
@@ -12,10 +22,10 @@ if not getgenv().AimbotSettings then
 		MaximumDistance = 300, -- Set this to something lower if you dont wanna lock on some random person across the map
 		AlwaysActive = false,
 		Aimbot = {
-			Enabled = false,
+			Enabled = true,
 			TargetPart = "Head",
-			Use_mousemoverel = false,
-			Strength = 200, -- 1% - 200%
+			Use_mousemoverel = true,
+			Strength = 100, -- 1% - 200%
 			AimType = "Hold", -- "Hold" or "Toggle"
 			AimAtNearestPart = false
 		},
@@ -31,8 +41,8 @@ if not getgenv().AimbotSettings then
 			RequireMovement = true
 		},
 		FovCircle = {
-			Enabled = false,
-			Dynamic = false,
+			Enabled = true,
+			Dynamic = true,
 			Radius = 100,
 			Transparency = 1,
 			Color = Color3.fromRGB(255,255,255),
@@ -154,17 +164,14 @@ local gids = { -- game ids
 	['mm2'] = 66654135
 }
 local getEntry, raycast, ts, characters, teams, rp
-	local _cache = rawget(debug.getupvalue(require, 1), "_cache")
-	local ReplicationInterface = rawget(rawget(_cache, "ReplicationInterface"), "module")
-	getEntry = rawget(ReplicationInterface, "getEntry")
 if (GameId == gids.pf) or (GameId == gids.pft) or (GameId == gids.pfu) then
 	local require = rawget(getrenv().shared, "require")
 	if require == nil then
-		setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/Spoorloos/scripts/main/pf-actor-bypass.lua"))()')
-		local a = Instance.new("Message", game.CoreGui)
-		a.Text = "-- Universal Esp Notice --\n\nA script has been copied to your clipboard.\nPlease put this script in your exploit's autoexec folder and rejoin the game.\n(this script is required to bypass the new update)\n\nbypass was created by Spoorloos"
-		return
-	else
+print("nono pf no gud")
+	end
+	local _cache = rawget(debug.getupvalue(require, 1), "_cache")
+	local ReplicationInterface = rawget(rawget(_cache, "ReplicationInterface"), "module")
+	getEntry = rawget(ReplicationInterface, "getEntry")
 elseif GameId == gids.bb then
 	for _,v in next, getgc(true) do
 		if typeof(v) == "table" and rawget(v, "InitProjectile") and rawget(v, "TS") then
