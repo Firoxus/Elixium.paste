@@ -1,11 +1,3 @@
---[[
-v1.7.2 Changes
-- Made a few synchronization changes to prevent errors on Synapse
-
-UI Changes
-- No UI changes
-]]
-
 local VERSION = "v1.7.2"
 
 if not EspSettings then
@@ -260,14 +252,6 @@ local Base = {
 }
 local white, black = fromRGB(255,255,255), fromRGB(0,0,0)
 local getEntry, ts, characters, teams, rp
-if (GameId == gids.pf) or (GameId == gids.pft) or (GameId == gids.pfu) then
-	local require = rawget(getrenv().shared, "require")
-	if require == nil then
-		setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/Spoorloos/scripts/main/pf-actor-bypass.lua"))()')
-		local a = Instance.new("Message", game.CoreGui)
-		a.Text = "-- Universal Esp Notice --\n\nA script has been copied to your clipboard.\nPlease put this script in your exploit's autoexec folder and rejoin the game.\n(this script is required to bypass the new update)\n\nbypass was created by Spoorloos"
-		return
-	else
 		local _cache = rawget(debug.getupvalue(require, 1), "_cache")
 		local ReplicationInterface = rawget(rawget(_cache, "ReplicationInterface"), "module")
 		getEntry = rawget(ReplicationInterface, "getEntry")
