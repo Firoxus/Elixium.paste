@@ -1,13 +1,3 @@
---[[
-v1.1.20 Changes
-- Fixed for Phantom Forces (kinda)
-  - Universal Aimbot will now prompt you that you need to put a bypass script in your autoexec folder.
-  - Bypass script made by Spoorloos
-
-UI Changes
-- No UI changes
-]]
-
 local VERSION = "v1.1.20"
 
 if not getgenv().AimbotSettings then
@@ -164,14 +154,6 @@ local gids = { -- game ids
 	['mm2'] = 66654135
 }
 local getEntry, raycast, ts, characters, teams, rp
-if (GameId == gids.pf) or (GameId == gids.pft) or (GameId == gids.pfu) then
-	local require = rawget(getrenv().shared, "require")
-	if require == nil then
-		setclipboard('loadstring(game:HttpGet("https://raw.githubusercontent.com/Spoorloos/scripts/main/pf-actor-bypass.lua"))()')
-		local a = Instance.new("Message", game.CoreGui)
-		a.Text = "-- Universal Aimbot Notice --\n\nA script has been copied to your clipboard.\nPlease put this script in your exploit's autoexec folder and rejoin the game.\n(this script is required to bypass the new update)\n\nbypass was created by Spoorloos"
-		return
-	end
 	local _cache = rawget(debug.getupvalue(require, 1), "_cache")
 	local ReplicationInterface = rawget(rawget(_cache, "ReplicationInterface"), "module")
 	getEntry = rawget(ReplicationInterface, "getEntry")
