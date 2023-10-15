@@ -1,6 +1,12 @@
--- found this in manas script repo lol
--- credits to whoever made this
+--[[
+v1.1.20 Changes
+- Fixed for Phantom Forces (kinda)
+  - Universal Aimbot will now prompt you that you need to put a bypass script in your autoexec folder.
+  - Bypass script made by Spoorloos
 
+UI Changes
+- No UI changes
+]]
 
 local VERSION = "v1.1.20"
 
@@ -160,6 +166,9 @@ local gids = { -- game ids
 local getEntry, raycast, ts, characters, teams, rp
 if (GameId == gids.pf) or (GameId == gids.pft) or (GameId == gids.pfu) then
 	local require = rawget(getrenv().shared, "require")
+	if require == nil then
+print("nono pf no gud")
+	end
 	local _cache = rawget(debug.getupvalue(require, 1), "_cache")
 	local ReplicationInterface = rawget(rawget(_cache, "ReplicationInterface"), "module")
 	getEntry = rawget(ReplicationInterface, "getEntry")

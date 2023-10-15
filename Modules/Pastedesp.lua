@@ -1,5 +1,10 @@
--- found this in manas script repo lol
--- credits to whoever made this
+--[[
+v1.7.2 Changes
+- Made a few synchronization changes to prevent errors on Synapse
+
+UI Changes
+- No UI changes
+]]
 
 local VERSION = "v1.7.2"
 
